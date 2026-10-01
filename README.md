@@ -1,11 +1,11 @@
 # Co-Kriging
 # Spatial Interpolation using Ordinary Co-Kriging (Python)
 
-Repositori ini berisi implementasi algoritma **Ordinary Co-Kriging** dari awal (*scratch*) menggunakan Python untuk interpolasi spasial konsentrasi logam berat (*Zinc* dan *Copper*) dengan memanfaatkan transformasi **Box-Cross** guna memenuhi asumsi normalitas data.
+Repositori ini berisi implementasi algoritma **Ordinary Co-Kriging** dari awal (*scratch*) menggunakan Python untuk interpolasi spasial konsentrasi logam berat (*Zinc* dan *Copper*) dengan memanfaatkan transformasi **Box-Coxx** guna memenuhi asumsi normalitas data.
 
 ## Fitur Utama Proyek
 1. **Eksplorasi Data Spasial (EDA):** Analisis statistik deskriptif, histogram, boxplot, dan matriks korelasi.
-2. **Transformasi Box-Cross:** Menemukan nilai parameter $\lambda$ optimal untuk mengatasi asimetri (*skewness*) pada data *Zinc* dan *Copper*.
+2. **Transformasi Box-Coxx:** Menemukan nilai parameter $\lambda$ optimal untuk mengatasi asimetri (*skewness*) pada data *Zinc* dan *Copper*.
 3. **Pemodelan Variogram Empiris & Teoretis:** 
    * Perhitungan semivarians empiris (variogram utama, sekunder, dan *cross-variogram*).
    * Fitting model teoretis (**Spherical**, **Exponential**, dan **Gaussian**) menggunakan optimasi numerik dengan evaluasi nilai **SSE (Sum of Squared Errors)** otomatis untuk mencari model terbaik.
@@ -28,6 +28,6 @@ Pastikan pustaka berikut terinstal di lingkungan Python Anda (Google Colab / Jup
 2. Siapkan dataset spasial (misalnya `meuse.csv` yang mencakup koordinat `x`, `y`, `zinc`, dan `copper`).
 3. Jalankan sel kode secara berurutan mulai dari input data hingga visualisasi peta akhir.
 
-## 📊 Hasil Evaluasi Model
+## Hasil Evaluasi Model
 * **Model Variogram Terbaik:** Terpilih secara otomatis berdasarkan SSE terkecil (Spherikal / Eksponensial / Gaussian).
 * **Metrik Akurasi (LOOCV):** Menampilkan nilai RMSE dan $R^2$ pada skala transformasi maupun skala asli setelah proses *inverse*.
